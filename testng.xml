@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="com.lemon.listenter.TestResultListener"/>
+    </listeners>
+    <test name="chrome" >
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.lemon.testcase.Logger_Test"/>
+        </classes>
+    </test>
+    <test name="firefox" >
+        <parameter name="browserName" value="firefox"/>
+        <classes>
+            <class name="com.lemon.testcase.Login_Test"/>
+        </classes>
+    </test>
+</suite>
